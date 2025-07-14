@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint Form</title>
+    <link rel="stylesheet" href="css/complaint.css">
+</head>
+<body>
+    <h1 class="heading1">Complaint Form</h1>
+    <form method="POST" action="submit-complaint.php">
+    <div class="form-container">
+        <h1>Department Information</h1>
+        <label for="titlename">Title:</label>
+        <input type="text" id="titlename" name="titlename" placeholder="Enter title" required>
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" placeholder="Enter city" required>
+        <label for="panchayati_level">Panchayati System:</label>
+        <select id="panchayati_level" name="panchayati_level" required>
+            <option selected disabled>Select the Panchayati</option>
+            <option value="1">Gram Panchayat</option>
+            <option value="2">Panchayat Samiti</option>
+            <option value="3">Zila Parishad</option>
+        </select>
+        <label for="department_name">Department Name:</label>
+        <select id="department_name" name="department_name" required>
+            <option selected disabled>Select the department</option>
+            <option value="1">Public Works Department (PWD)</option>
+            <option value="2">Rural Engineering Department (RED)</option>
+            <option value="3">Agriculture Department</option>
+            <option value="4">Education Department</option>
+            <option value="5">Social Welfare Department</option>
+            <option value="6">Animal Husbandry Department</option>
+            <option value="7">Forest Department</option>
+        </select>
+        <label for="name">Person Name:</label>
+        <input type="text" id="name" name="person_name" placeholder="Enter name" required>
+        <label for="dept_num">Department Number:</label>
+        <input type="text" id="dept_num" name="dept_num" placeholder="Enter department number" required>
+        <label for="address">Department Address:</label>
+        <input type="text" id="address" name="address" placeholder="Enter address" required>
+    </div>
+    <div class="form-container">
+        <h1>Complaint Details</h1>
+        <label for="complaint_title">Complaint Title:</label>
+        <input type="text" id="complaint_title" name="complaint_title" placeholder="Enter complaint title" required>
+        <label for="complaint_date">Complaint Date:</label>
+        <input type="date" id="complaint_date" name="complaint_date" required>
+        <label for="complaint_description">Complaint Description:</label>
+        <textarea id="complaint_description" name="complaint_description" placeholder="Enter description" required></textarea>
+    </div>
+    <div class="form-container">
+        <h1>Personal Information</h1>
+        <label for="user_name">Name:</label>
+        <input type="text" id="user_name" name="user_name" placeholder="Enter name" required>
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone" placeholder="Enter phone number" pattern="[0-9]{10}" title="Enter a 10-digit phone number" required>
+        <label for="aadhar">Aadhar Number:</label>
+        <input type="text" id="aadhar" name="aadhar" placeholder="Enter Aadhar number" pattern="[0-9]{12}" title="Enter a 12-digit Aadhar number" required>
+        <label for="pan">Pan Card Number:</label>
+        <input type="text" id="pan" name="pan" placeholder="Enter Pan number" pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}" title="Enter a valid PAN (e.g., ABCDE1234F)" required>
+    </div>
+    <div class="button-container">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </div>
+</form>
+    <script src="js/complaint.js"></script>
+</body>
+</html>

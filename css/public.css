@@ -1,0 +1,233 @@
+body {
+    background-image: url('https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 20px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    color: #4834d4;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #f8f9fa, #ffffff);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #4834d4;
+    transition: transform 0.3s ease;
+}
+
+.form-group:hover {
+    transform: translateX(5px);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #2c3e50;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #4834d4;
+    box-shadow: 0 0 10px rgba(72, 52, 212, 0.2);
+    outline: none;
+}
+
+select {
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(45deg, #4834d4, #686de0);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(45deg, #686de0, #4834d4);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(72, 52, 212, 0.3);
+}
+
+.image-preview {
+    margin-top: 15px;
+    padding: 15px;
+    border: 2px dashed #4834d4;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.8);
+    min-height: 120px;
+    transition: all 0.3s ease;
+}
+
+.image-preview:hover {
+    border-color: #686de0;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+optgroup {
+    background-color: #f1f2f6;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+option {
+    background-color: #ffffff;
+    padding: 8px;
+    color: #2c3e50;
+}
+
+.location-btn {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: linear-gradient(45deg, #2ecc71, #27ae60);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    width: auto;
+}
+
+.location-btn:hover {
+    background: linear-gradient(45deg, #27ae60, #2ecc71);
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(46, 204, 113, 0.3);
+}
+
+.location-details {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    font-size: 0.9em;
+    display: none;
+}
+
+.success-message {
+    margin-top: 20px;
+    padding: 25px;
+    background: linear-gradient(135deg, #28a745, #20c997);
+    border-radius: 12px;
+    color: white;
+    text-align: center;
+    animation: slideIn 0.5s ease-out;
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2);
+}
+
+.success-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.success-content h3 {
+    margin: 0 0 20px 0;
+    font-size: 1.8em;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.success-details {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.success-content .main-message {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.success-content .reference {
+    margin: 15px 0;
+    font-size: 1.1em;
+}
+
+.success-content strong {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+}
+
+.success-content .contact-info {
+    margin: 20px 0;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+}
+
+.success-content .note {
+    margin-top: 20px;
+    font-style: italic;
+    font-size: 0.9em;
+    opacity: 0.9;
+}
+
+.success-content .support {
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #e8f5e9;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Public Complaint Form</title>
+    <link rel="stylesheet" href="css/public.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Public Complaint Form</h1>
+      <form id="complaintForm">
+        <div class="form-group">
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" required />
+        </div>
+
+        <div class="form-group">
+          <label for="complaint-level">Complaint Level:</label>
+          <select id="complaint-level" name="complaint-level" required>
+            <option value="">Select a complaint level</option>
+            <option value="gram-panchayat">Gram Panchayat</option>
+            <option value="panchayat-samiti">Panchayat Samiti</option>
+            <option value="zila-parishad">Zila Parishad</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="complaint-category">Complaint Category:</label>
+          <select id="complaint-category" name="complaint-category" required>
+            <option value="">Select a complaint Category</option>
+            <optgroup label="Local Government Complaints">
+              <option value="roads">
+                Poor road maintenance (potholes, drainage issues)
+              </option>
+              <option value="garbage">
+                Garbage collection delays or illegal dumping
+              </option>
+              <option value="noise">Noise complaints</option>
+              <option value="streetlights">
+                Broken streetlights or traffic signals
+              </option>
+              <option value="parks">Poor public park maintenance</option>
+              <option value="water">Local water supply issues</option>
+              <option value="zoning">Zoning or building</option>
+              <option value="taxation">Unfair property taxation</option>
+              <option value="permits">
+                Delays in issuing permits or licenses
+              </option>
+            </optgroup>
+
+            <optgroup label="State/Provincial Government">
+              <option value="transport">
+                State highway and transportation issues
+              </option>
+              <option value="education">
+                Public school or education system complaints
+              </option>
+              <option value="healthcare">
+                State hospital/healthcare facility issues
+              </option>
+              <option value="employment">
+                Employment and labor department concerns
+              </option>
+              <option value="police">
+                State police or law enforcement misconduct
+              </option>
+              <option value="environment">
+                Environmental regulation violations
+              </option>
+              <option value="utilities">
+                Utility regulation and service issues
+              </option>
+              <option value="welfare">
+                Delays in social welfare schemes or benefits
+              </option>
+            </optgroup>
+
+            <optgroup label="National/Federal Government">
+              <option value="passport">Passport or immigration delays</option>
+              <option value="security">
+                National security agency misconduct
+              </option>
+              <option value="tax">Federal taxation errors or corruption</option>
+              <option value="pension">
+                Delays in pension or social security benefits
+              </option>
+              <option value="national_health">
+                National healthcare policy or service failures
+              </option>
+              <option value="rights">
+                Discrimination or human rights abuses
+              </option>
+              <option value="id">
+                Issues with national ID or documentation
+              </option>
+              <option value="embassy">
+                Complaints against embassies or consulates abroad
+              </option>
+            </optgroup>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="location">Location:</label>
+          <input
+            type="text"
+            id="location"
+            name="location"
+            placeholder="Enter location manually"
+            required
+          />
+          <button type="button" id="getLocation" class="location-btn">
+            Get Current Location
+          </button>
+          <div id="locationDetails" class="location-details"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="details">Complaint Details:</label>
+          <textarea id="details" name="details" rows="5" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="photo">Upload Photo:</label>
+          <input
+            type="file"
+            id="photo"
+            name="photo"
+            accept="image/*"
+            required
+          />
+          <div id="imagePreview" class="image-preview"></div>
+        </div>
+
+        <button type="submit">Submit Complaint</button>
+      </form>
+    </div>
+    <script src="js/public.js"></script>
+  </body>
+</html>
